@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --theme-background: #ffffff;
+  --theme-foreground: #171717;
+  --theme-border: #d1d5db;
+}
+
+.dark {
+  --theme-background: #0a0f1a;
+  --theme-foreground: #f0f0f0;
+  --theme-border: #374151;
+}
+
+body {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
+  font-family: 'Geist Sans', sans-serif;
+}
+
+.bg-theme {
+  background-color: var(--theme-background);
+}
+
+.text-theme {
+  color: var(--theme-foreground);
+}
+
+.border-theme {
+  border-color: var(--theme-border);
+}
+
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+@keyframes text-flicker {
+  0%, 50%, 100% { color: #f87171; } /* merah */
+  25%, 75% { color: #803434; }      /* abu-abu */
+}
+
+.animate-text-flicker {
+  animation: text-flicker 2s infinite;
+}
+
+@keyframes glow-red {
+  0%, 100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #8b0000 inset; }
+  50% { box-shadow: 0 0 20px #ff4d4d, 0 0 40px #800000 inset; }
+}
+
+.animate-glow-card {
+  animation: glow-red 2s infinite alternate;
+}
