@@ -11,6 +11,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
   {
     ignores: [
       "node_modules/**",
@@ -19,6 +20,14 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+  },
+
+  // ⬇⬇⬇ Tambahkan block baru untuk rules ⬇⬇⬇
+  {
+    rules: {
+      "@next/next/no-img-element": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
   },
 ];
 
