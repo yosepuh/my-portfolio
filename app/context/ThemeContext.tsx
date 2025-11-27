@@ -22,8 +22,11 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   // Apply theme to html root
   useEffect(() => {
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(theme);
+    if (typeof document === 'undefined') return; // guard SSR
+
+    const doc = document.documentElement;
+    doc.classList.remove('light', 'dark');
+    doc.classList.add(theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 

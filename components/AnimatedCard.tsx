@@ -9,7 +9,7 @@ interface AnimatedCardProps {
 }
 
 export default function AnimatedCard({ children, className = "", delay = 0 }: AnimatedCardProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   const [transform, setTransform] = useState("perspective(600px) rotateX(0deg) rotateY(0deg)");
 
@@ -18,7 +18,7 @@ export default function AnimatedCard({ children, className = "", delay = 0 }: An
     if (!el) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: any[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setInView(true);
@@ -58,13 +58,13 @@ export default function AnimatedCard({ children, className = "", delay = 0 }: An
     <div
       ref={ref}
       style={{ transform, transitionDelay: `${delay}ms` }}
-      className={`mx-auto transform transition-all duration-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} ${className}`}
+      className={`mx-auto transform transition-all duration-500 ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      } ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {children}
     </div>
-
-
   );
 }

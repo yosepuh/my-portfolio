@@ -1,5 +1,4 @@
 // app/data/projectsData.ts
-
 export interface Project {
   id: number;
   title: string;
@@ -14,16 +13,16 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  // existing projects (1..6) unchanged...
   {
     id: 1,
     title: "Website Alfa Store (Second-Hand Shoes Marketplace)",
-    date: "2024",
+    date: "May 2024 - July 2024",
     description:
-      "Web-based marketplace for buying and selling second-hand shoes, built with PHP and MySQL for smooth transactions and easy admin management.",
+      "Web-based marketplace for buying and selling second-hand shoes, built with PHP and MySQL for smooth transactions.",
     details:
       "Developed a web-based marketplace for second-hand shoes using PHP, MySQL, and CSS. The platform enables customers to browse, purchase, and review products, while admins manage inventory and orders efficiently. Focused on building a structured backend workflow and intuitive user interface to ensure seamless transactions for both buyers and sellers.",
     detailPath: "/projects/1",
-    externalLink: "https://your-alfa-store-link.com",
     features: [
       "User authentication (login & register)",
       "Product listing with images and filters",
@@ -32,30 +31,27 @@ const projects: Project[] = [
     ],
     technologies: ["PHP", "MySQL", "HTML", "CSS"],
     media: [
-      {
-        src: "/images/projects/alfa1.png",
-        alt: "Homepage of Alfa Store",
-      },
-      {
-        src: "/images/projects/alfa2.png",
-        alt: "Admin product management panel",
-      },
-      {
-        src: "/images/projects/alfa3.png",
-        alt: "Product listing and WhatsApp purchase button",
-      },
-    ],
+      { src: "/projects/aw/aw1.png", alt: "Homepage of Alfa Store" },
+      { src: "/projects/aw/aw2.png", alt: "Homepage of Alfa Store" },
+      { src: "/projects/aw/aw3.png", alt: "Registration and login page" },
+      { src: "/projects/aw/aw4.png", alt: "Product listing and WhatsApp purchase button" },
+      { src: "/projects/aw/aw5.png", alt: "Add new product page for admin" },
+      { src: "/projects/aw/aw6.png", alt: "delete product confirmation for admin" },
+      { src: "/projects/aw/aw7.png", alt: "admin decision dashboard" },
+      { src: "/projects/aw/aw8.png", alt: "thank you page after purchase" }
+    ]
   },
+  // ... other existing project entries (2..6) remain as you had them
   {
     id: 2,
     title: "LMGA Supermarket — Supply Chain Management UI",
-    date: "2024",
+    date: "January 2024 - April 2024",
     description:
-      "Designed an intuitive UI for LMGA Supermarket’s supply chain management system, focusing on product flow and operational efficiency.",
+      "Designed an intuitive UI for LMGA Supermarket’s SCM system, focusing on product flow and operational efficiency.",
     details:
-      "Created the user interface for LMGA Supermarket’s supply chain management system, optimizing the visualization of procurement, inventory, and sales processes. Focused on clear navigation, consistent layout, and functional data presentation to support production and logistic workflows. ",
+      "Conducted analysis and development of the supply chain management flow for LMGA Supermarket, covering procurement, inventory, and sales processes. I specifically handled the supplier division, including mapping supplier workflows, defining data structures, and organizing end-to-end interaction flows between suppliers and internal departments. The work focused on ensuring clarity, efficiency, and traceability throughout operational processes.",
     detailPath: "/projects/2",
-    externalLink: "https://www.figma.com/",
+    externalLink: "https://www.figma.com/proto/iBKGqrGibLMj2AEiCI08Dv/figmaproject?node-id=1-25537&t=fSFMg4ovvX51Nih6-1",
     features: [
       "UI wireframes for procurement, inventory, and sales modules",
       "Streamlined layout for data visibility",
@@ -63,131 +59,107 @@ const projects: Project[] = [
     ],
     technologies: ["Figma", "Miro"],
     media: [
-      {
-        src: "/images/projects/lmga1.png",
-        alt: "LMGA redesigned homepage layout",
-      },
-      {
-        src: "/images/projects/lmga2.png",
-        alt: "Product detail interface",
-      },
-    ],
+      { src: "/projects/figma/figma1.png", alt: "LMGA login page" },
+      { src: "/projects/figma/figma2.png", alt: "analytics dashboard for supply chain overview" },
+      { src: "/projects/figma/figma3.png", alt: "product inventory management interface" },
+      { src: "/projects/figma/figma4.png", alt: "product addition interface" }
+    ]
   },
   {
     id: 3,
     title: "Business Process Analysis  — Online Grocery System",
-    date: "2025",
+    date: "Sep 2024 - Dec 2024",
     description:
       "Developed business process flowcharts for an online grocery system to illustrate system interactions and optimize workflows.",
     details:
       "Created detailed business process and use case diagrams using Rational Rose for an online grocery system. The flowcharts map out customer, admin, and supplier interactions to identify process bottlenecks and improve operational efficiency. This project demonstrates strong analytical and process design capabilities aligned with business analysis practices.",
     detailPath: "/projects/3",
-    externalLink: "https://epicor.com/",
+    externalLink: "https://drive.google.com/drive/folders/1IsyvN4Ml-5B5dSYYyaIQbFxCpSiJIfpX?usp=drive_link",
     features: [
       "Use case and activity diagrams",
       "Process optimization analysis",
-      "System interaction mapping",
+      "System interaction mapping"
     ],
     technologies: ["Rational Rose", "Google Docs"],
     media: [
-      {
-        src: "/images/projects/epicor1.png",
-        alt: "Epicor MTO process diagram",
-      },
-      {
-        src: "/images/projects/epicor2.png",
-        alt: "Production order tracking screen",
-      },
-    ],
+      { src: "/projects/bad/bad1.jpg", alt: "Flow" },
+      { src: "/projects/bad/bad2.jpg", alt: "Flow" },
+      { src: "/projects/bad/bad3.jpg", alt: "Flow" },
+      { src: "/projects/bad/bad4.jpg", alt: "Flow" },
+      { src: "/projects/bad/bad5.jpg", alt: "Flow" },
+      { src: "/projects/bad/bad6.jpg", alt: "Flow" },
+
+    ]
   },
   {
-    id: 4,
-    title: "Epicor ERP Bootcamp",
-    date: "2025",
-    description:
-      "Hands-on ERP training covering five key modules: production, sales, procurement, inventory, and finance.",
-    details:
-      "Participated in an intensive Epicor ERP bootcamp, focusing on five modules — production, sales, procurement, inventory, and finance. Gained practical experience simulating real-world business processes and improving workflow efficiency through ERP system integration. Strengthened understanding of enterprise resource planning and cross-functional data management.",
-    detailPath: "/projects/4",
-    externalLink: "https://researchgate.net/",
-    features: [
-      "Real-time ERP simulation",
-      "End-to-end business process mapping",
-      "Data flow analysis across departments",
-    ],
-    technologies: ["ERP EPICOR"],
-    media: [
-      {
-        src: "/images/projects/sap1.png",
-        alt: "SLR methodology diagram",
-      },
-      {
-        src: "/images/projects/sap2.png",
-        alt: "Research results visualization",
-      },
-    ],
-  },
+  id: 4,
+  title: "Epicor ERP Bootcamp",
+  date: "Sep 2024 - July 2025",
+  description:
+    "Hands-on ERP training covering five key modules: production, sales, procurement, inventory, and finance.",
+  details: `
+Completed a full Make to Order workflow—from part creation, revision setup, BOO/BOM structure, job generation, material issue, labor entry, shipment, invoicing, to payment. A complete execution of an end-to-end production and financial cycle.
+  `,
+  detailPath: "/projects/4",
+  externalLink: "https://docs.google.com/document/d/1CZD-qepdsGe82LdiWedTHGbAjTik5KSUTSZxgw1mJSo/edit?usp=sharing",
+  features: [
+    "Real-time ERP simulation",
+    "End-to-end business process mapping",
+    "Data flow analysis across departments"
+  ],
+  technologies: ["ERP EPICOR"],
+  media: [
+    { src: "/projects/erp/erp1.png", alt: "ERP Epicor" },
+    { src: "/projects/erp/erp2.png", alt: "ERP Epicor" },
+    { src: "/projects/erp/erp3.png", alt: "ERP Epicor" },
+    { src: "/projects/erp/erp4.png", alt: "ERP Epicor" },
+    { src: "/projects/erp/erp5.png", alt: "ERP Epicor" },
+    { src: "/projects/erp/erp6.png", alt: "ERP Epicor" },
+
+
+  ]
+},
+
   {
     id: 5,
     title: "FromHeart — Mobile App Demo & UI Design",
-    date: "2025",
+    date: "September 2024 - December 2024",
     description:
       "Developed a tea-selling demo app using Flutter and Dart, featuring an intuitive UI originally designed in Figma.",
     details:
       " Created a cross-platform demo application for a tea-selling business, starting from UI prototyping in Figma to full implementation in Flutter using Dart. Focused on delivering a clean, responsive interface with smooth navigation and order management flow. The project demonstrates both design thinking and technical execution — bridging business logic, user experience, and system functionality.",
     detailPath: "/projects/5",
-    externalLink: "https://instagram.com/jophienne",
+    externalLink: "https://github.com/rinchigo/MP-FromHeart",
     features: [
       "UI/UX design translated from Figma to Flutter",
       "Product listing and order simulation",
       "Responsive layout for mobile devices",
-      "Hosted and showcased via GitHub",
+      "Hosted and showcased via GitHub"
     ],
     technologies: ["Flutter", "Dart", "VsCode", "Figma", "GitHub"],
     media: [
-      {
-        src: "/images/projects/jophienne1.png",
-        alt: "Poster design preview",
-      },
-      {
-        src: "/images/projects/jophienne2.png",
-        alt: "Instagram layout of creative assets",
-      },
-    ],
+      { src: "/projects/fh/fh1.png", alt: "FH App" },
+      { src: "/projects/fh/fh2.png", alt: "FH App" },
+      { src: "/projects/fh/fh3.png", alt: "FH App" },
+      { src: "/projects/fh/fh4.png", alt: "FH App" },
+      { src: "/projects/fh/fh5.png", alt: "FH App" },
+      { src: "/projects/fh/fh6.png", alt: "FH App" },
+      { src: "/projects/fh/fh7.png", alt: "FH App" },
+      { src: "/projects/fh/fh8.png", alt: "FH App" },
+
+    ]
   },
 
+  // NEW: single Project card that points to Experience page (teaser for PT Jababeka)
   {
-  id: 6,
-  title: "Data Analytics Finance Dashboard - PT Jababeka Tbk",
-  date: "2025",
-  description:
-    "Developed a finance analytics dashboard using ERP data to provide actionable insights across key financial modules.",
-  details:
-    "Collected and processed financial data from the ERP system JIFAS, covering five key modules: Accounts Payable, Accounts Receivable, PUM, RU, and Cash & Bank. Designed and implemented an interactive Power BI dashboard using DAX to visualize trends, track KPIs, and generate reports for decision-making. This project strengthened skills in data modeling, reporting, and business analytics while applying ERP knowledge in a real-world corporate setting.",
-  detailPath: "/projects/6",
-  externalLink: "https://powerbi.microsoft.com/", // Optional: link to dashboard or Power BI profile if available
-  features: [
-    "Interactive dashboards with KPIs and financial metrics",
-    "Data integration from ERP modules (AP, AR, PUM, RU, Cash & Bank)",
-    "DAX calculations and data modeling for reporting",
-    "Automated reporting for management insights"
-  ],
-  technologies: ["Power BI", "DAX", "Excel", "ERP JIFAS"],
-  media: [
-    {
-      src: "/images/projects/jababeka1.png",
-      alt: "Finance dashboard overview"
-    },
-    {
-      src: "/images/projects/jababeka2.png",
-      alt: "Module-specific KPI visualization"
-    },
-    {
-      src: "/images/projects/jababeka3.png",
-      alt: "Interactive Power BI charts and tables"
-    }
-  ],
-},
+    id: 6,
+    title: "PT Jababeka — Internship Projects (Selected Highlights)",
+    date: "August 2025 – December 2025",
+    description:
+      "Selected highlights from my internship at PT Jababeka covering Odoo prototyping, Finance dashboards (Power BI), vendor validation tooling, and ERP support (JIFAS). Click Learn More to view full experience.",
+    detailPath: "/experience/exp1", // <-- this points to the Experience detail page (exp1)
+    
+  }
 ];
 
 export default projects;
