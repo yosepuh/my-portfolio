@@ -29,8 +29,7 @@ export default function HomePage() {
               ✦ Open to Opportunities
             </span>
             <h1 className="text-5xl md:text-6xl font-extrabold text-[#0A2540] leading-none tracking-tight" style={syne}>
-              Hi, I'm
-<br />
+              Hi, I&apos;m<br />
               <span className="text-[#1A7EC8]">Grace</span><br />
               Josephine!
             </h1>
@@ -191,7 +190,7 @@ export default function HomePage() {
       <section id="contact" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
         <div className="bg-[#0A2540] rounded-3xl p-10 text-center shadow-lg">
           <span className="inline-block bg-[#1A7EC8] text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-wide mb-4">
-Let's Connect
+            ✦ Let&apos;s Connect
           </span>
           <h2 className="text-3xl font-extrabold text-white" style={syne}>Get In Touch!</h2>
           <p className="mt-3 text-sm text-white/50 max-w-sm mx-auto">
