@@ -150,16 +150,6 @@ Completed a full Make to Order workflow—from part creation, revision setup, BO
     ]
   },
 
-  // NEW: single Project card that points to Experience page (teaser for PT Jababeka)
-  {
-    id: 6,
-    title: "PT Jababeka — Internship Projects (Selected Highlights)",
-    date: "August 2025 – December 2025",
-    description:
-      "Selected highlights from my internship at PT Jababeka covering Odoo prototyping, Finance dashboards (Power BI), vendor validation tooling, and ERP support (JIFAS). Click Learn More to view full experience.",
-    detailPath: "/experience/exp1", // <-- this points to the Experience detail page (exp1)
-    
-  }
 ];
 
 export default projects;

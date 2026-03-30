@@ -1,289 +1,224 @@
 'use client';
 
 import { useState } from 'react';
-import FuturisticBackground from '@/components/FuturisticBackground';
 import AnimatedCard from '@/components/AnimatedCard';
+import FuturisticBackground from '@/components/FuturisticBackground';
 import projects from './data/projectsData';
 import experiences from './data/experienceData';
 import organizations from './data/organizationData';
 import Link from 'next/link';
-import Typewriter from '@/components/Typewriter';
 
 export default function HomePage() {
-
-  // ==== SEE MORE STATES ====
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllExperiences, setShowAllExperiences] = useState(false);
   const [showAllOrganizations, setShowAllOrganizations] = useState(false);
-
   const limit = 6;
 
-  return (
-    <div className="relative min-h-screen text-white font-orbitron px-6 pt-24">
+  const syne = { fontFamily: "'Syne', sans-serif" };
+  const jakarta = { fontFamily: "'Plus Jakarta Sans', sans-serif" };
 
-      {/* Background */}
+  return (
+    <div className="min-h-screen bg-[#F0F7FF] relative" style={jakarta}>
       <FuturisticBackground />
 
-      {/* About Section / Hero */}
-      <section
-        id="about"
-        className="flex flex-col items-center justify-center text-center relative z-10 min-h-[70vh] space-y-6 animate-fadeInUp"
-      >
-        <Typewriter
-          text="Hi, I’m Grace Josephine!"
-          speed={80}
-          className="text-5xl font-bold text-white drop-shadow-md"
-        />
+      {/* HERO */}
+      <section id="about" className="pt-28 pb-16 px-6 max-w-5xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-1 text-center md:text-left">
+            <span className="inline-block bg-[#DBEEFF] text-[#1A5F9E] text-xs font-bold px-4 py-1.5 rounded-full tracking-wide mb-5">
+              ✦ Open to Opportunities
+            </span>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-[#0A2540] leading-none tracking-tight" style={syne}>
+              Hi, I'm<br />
+              <span className="text-[#1A7EC8]">Grace</span><br />
+              Josephine!
+            </h1>
+            <p className="mt-5 text-sm text-[#0A2540]/60 leading-relaxed max-w-md mx-auto md:mx-0">
+              Information Systems student at President University, passionate about turning data and systems into meaningful business impact. Experienced in ERP systems, QA testing, Power BI dashboards, and business analysis.
+            </p>
+            <div className="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
+              <a href="#projects" className="px-5 py-2.5 bg-[#1A7EC8] text-white text-sm font-bold rounded-full hover:bg-[#1567A8] transition">
+                View Projects
+              </a>
+              <a href="#contact" className="px-5 py-2.5 bg-white text-[#1A7EC8] text-sm font-bold rounded-full border border-[#DBEEFF] hover:border-[#1A7EC8] transition">
+                Get In Touch
+              </a>
+            </div>
+          </div>
 
-        <p className="text-gray-200 drop-shadow-sm max-w-xl">
-         Information Systems student with solid experience in business analysis, ERP implementation, and application support. Skilled in process mapping, system design, and translating business requirements into clear technical solutions. Supported by hands-on exposure to multiple ERP functional areas and web-based application development, I focus on delivering efficient, data-driven, and user-centered improvements to real business workflows.
-        </p>
-
-        <img
-          src="me.jpg"
-          alt="Grace Josephine"
-          className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-red-700 shadow-xl"
-        />
-
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <a
-            href="#projects"
-            className="px-6 py-2 rounded-lg bg-[rgba(50,0,0,0.7)] border border-red-700 shadow-lg text-white font-bold hover:opacity-90 hover:shadow-red-500 transition backdrop-blur-md"
-          >
-            View My Projects
-          </a>
-          <a
-            href="/certifications"
-            className="px-6 py-2 rounded-lg bg-[rgba(50,0,0,0.7)] border border-red-700 shadow-lg text-white font-bold hover:opacity-90 hover:shadow-red-500 transition backdrop-blur-md"
-          >
-            View My Certifications
-          </a>
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative">
+              <div className="w-52 h-52 rounded-3xl overflow-hidden border-4 border-white shadow-lg shadow-[#1A7EC8]/10">
+                <img src="me.jpg" alt="Grace Josephine" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-3 -right-3 bg-[#1A7EC8] text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow" style={syne}>
+                IS Student ✦
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl px-5 py-3 border border-[#DBEEFF] shadow-sm flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#1A7EC8] animate-pulse" />
+              <span className="text-xs font-semibold text-[#0A2540]">Available for work</span>
+            </div>
+          </div>
         </div>
       </section>
 
-        {/* Education */}
-<section id="education" className="mt-24 max-w-4xl mx-auto relative z-10">
-  <h2 className="text-4xl font-semibold text-center mb-12 drop-shadow-md animate-text-flicker">
-    Education
-  </h2>
+      {/* EDUCATION */}
+      <section id="education" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <SectionTitle syne={syne}>Education</SectionTitle>
+        <div className="mt-8 bg-white rounded-3xl border border-[#DBEEFF] p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
+          <div className="border-l-4 border-[#1A7EC8] pl-6">
+            <h3 className="text-xl font-extrabold text-[#0A2540]" style={syne}>
+              Bachelor of Information Systems
+            </h3>
+            <p className="text-sm text-[#0A2540]/60 mt-1">President University</p>
+            <p className="text-sm text-[#0A2540]/50 mt-0.5">2023 – Present · 8th Semester</p>
+          </div>
+          <span className="self-start md:self-center bg-[#EFF6FF] text-[#1A5F9E] text-xs font-bold px-4 py-2 rounded-full border border-[#DBEEFF]">
+            Expected 2026
+          </span>
+        </div>
+      </section>
 
-  <div className="border-l-4 border-red-600 pl-6 space-y-2">
-    <h3 className="text-2xl font-semibold text-red-400">
-      Bachelor of Information Systems
-    </h3>
-    <p className="text-gray-200">President University</p>
-    <p className="text-gray-300">2023 – Present • 7th Semester</p>
-    <p className="text-gray-300">Expected Graduation: 2026</p>
-  </div>
-</section>
+      {/* SKILLS */}
+      <section id="skills" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <SectionTitle syne={syne}>Skills</SectionTitle>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { title: "Core Skills", bg: "bg-[#0A2540]", titleColor: "text-white", tagBg: "bg-white/10 text-white/80 border-white/10", items: ["Business Analysis", "Requirement Analysis", "Process Mapping (BPMN)", "ERP Implementation", "Application Support", "Workflow Design"] },
+            { title: "Tools", bg: "bg-[#1A7EC8]", titleColor: "text-white", tagBg: "bg-white/20 text-white border-white/20", items: ["Odoo ERP", "Epicor ERP", "Power BI", "Figma", "Jira", "Laravel", "VS Code"] },
+            { title: "Languages & DB", bg: "bg-white", titleColor: "text-[#0A2540]", tagBg: "bg-[#EFF6FF] text-[#1A5F9E] border-[#DBEEFF]", items: ["Java", "PHP", "Python", "JavaScript", "TypeScript", "ReactJS", "SQL", "PostgreSQL"] },
+            { title: "Soft Skills", bg: "bg-[#EFF6FF]", titleColor: "text-[#0A2540]", tagBg: "bg-white text-[#1A5F9E] border-[#DBEEFF]", items: ["Analytical Thinking", "Problem Solving", "Communication", "Leadership", "Collaboration", "Detail-Oriented"] },
+          ].map((cat) => (
+            <div key={cat.title} className={`${cat.bg} rounded-3xl p-6 border border-[#DBEEFF] shadow-sm`}>
+              <h3 className={`text-sm font-extrabold ${cat.titleColor} mb-4`} style={syne}>{cat.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {cat.items.map((item) => (
+                  <span key={item} className={`text-xs font-semibold px-3 py-1 rounded-xl border ${cat.tagBg}`}>{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-
-  <section id="skills" className="mt-24 max-w-4xl mx-auto relative z-10">
-  <h2 className="text-4xl font-semibold text-center mb-12 drop-shadow-md animate-text-flicker">
-    Skills
-  </h2>
-
-  <div className="space-y-12">
-
-    {/* Core Skills */}
-<div className="border-l-4 border-red-600 pl-6 space-y-2">
-  <h3 className="text-2xl font-semibold text-red-400">Core Skills</h3>
-  <ul className="columns-3 text-gray-200 space-y-1">
-    <li>Business Analysis</li>
-    <li>Requirement Analysis</li>
-    <li>Process Mapping (BPMN)</li>
-    <li>ERP Implementation</li>
-    <li>Application Support</li>
-    <li>System & Workflow Design</li>
-    <li>Supply Chain Fundamentals</li>
-  </ul>
-</div>
-
-{/* Tools */}
-<div className="border-l-4 border-red-600 pl-6 space-y-2">
-  <h3 className="text-2xl font-semibold text-red-400">Tools</h3>
-  <ul className="columns-3 text-gray-200 space-y-1">
-    <li>Odoo ERP</li>
-    <li>Epicor ERP</li>
-    <li>Laravel</li>
-    <li>Jira</li>
-    <li>Visual Studio Code</li>
-    <li>Figma</li>
-    <li>Power BI</li>
-  </ul>
-</div>
-
-{/* Programming Languages & Databases */}
-<div className="border-l-4 border-red-600 pl-6 space-y-2">
-  <h3 className="text-2xl font-semibold text-red-400">Languages & Databases</h3>
-  <ul className="columns-3 text-gray-200 space-y-1">
-    <li>Java</li>
-    <li>PHP</li>
-    <li>Python</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>ReactJS</li>
-    <li>SQL</li>
-    <li>PostgreSQL</li>
-  </ul>
-</div>
-
-{/* Soft Skills */}
-<div className="border-l-4 border-red-600 pl-6 space-y-2">
-  <h3 className="text-2xl font-semibold text-red-400">Soft Skills</h3>
-  <ul className="columns-3 text-gray-200 space-y-1">
-    <li>Analytical Thinking</li>
-    <li>Problem Solving</li>
-    <li>Communication</li>
-    <li>Leadership</li>
-    <li>Collaboration</li>
-    <li>Detail-Oriented</li>
-    <li>User-Centered Approach</li>
-  </ul>
-</div>
-
-  </div>
-</section>
-
-
-      {/* Projects */}
-      <section id="projects" className="mt-24 max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl font-semibold text-center mb-12 drop-shadow-md animate-text-flicker">
-          Projects
-        </h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* PROJECTS */}
+      <section id="projects" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <SectionTitle syne={syne}>Projects</SectionTitle>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(showAllProjects ? projects : projects.slice(0, limit)).map((p, idx) => (
             <AnimatedCard key={p.id} delay={idx * 80}>
-              <div className="p-6 h-64 flex flex-col justify-between rounded-xl shadow-lg border border-gradient-to-r from-red-600 via-maroon-700 to-black
-                              bg-[rgba(50,0,0,0.7)] backdrop-blur-md transition transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50">
+              <div className="bg-white rounded-3xl border border-[#DBEEFF] p-6 flex flex-col justify-between h-60 hover:border-[#1A7EC8] hover:shadow-md hover:shadow-[#1A7EC8]/10 transition-all duration-200 shadow-sm">
                 <div>
-                  <h3 className="text-xl font-semibold text-red-400 drop-shadow-sm">{p.title}</h3>
-                  <p className="text-gray-100">{p.date}</p>
-                  <p className="mt-2 line-clamp-3 text-gray-200">{p.description}</p>
+                  <h3 className="text-sm font-extrabold text-[#0A2540]" style={syne}>{p.title}</h3>
+                  <p className="text-xs text-[#0A2540]/40 mt-1">{p.date}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-[#0A2540]/60 leading-relaxed">{p.description}</p>
                 </div>
-                <Link
-                  href={`/projects/${p.id}`}
-                  className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-red-600 via-maroon-700 to-black text-white font-bold hover:opacity-90 text-center transition"
-                >
-                  View Details
+                <Link href={`/projects/${p.id}`} className="mt-4 self-start text-xs font-bold text-[#1A7EC8] border border-[#DBEEFF] px-4 py-2 rounded-xl hover:bg-[#EFF6FF] transition">
+                  View Details →
                 </Link>
               </div>
             </AnimatedCard>
           ))}
         </div>
-
-        {/* SEE MORE BUTTON */}
         {projects.length > limit && (
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => setShowAllProjects(!showAllProjects)}
-              className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition"
-            >
-              {showAllProjects ? "See Less" : "See More"}
+          <div className="flex justify-center mt-8">
+            <button onClick={() => setShowAllProjects(!showAllProjects)} className="px-6 py-2.5 rounded-full border-2 border-[#1A7EC8] text-[#1A7EC8] text-sm font-bold hover:bg-[#1A7EC8] hover:text-white transition">
+              {showAllProjects ? "See Less" : "See More Projects"}
             </button>
           </div>
         )}
       </section>
 
-      {/* Experiences */}
-      <section id="experiences" className="mt-24 max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl font-semibold text-center mb-12 drop-shadow-md animate-text-flicker">
-          Experiences
-        </h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* EXPERIENCES */}
+      <section id="experiences" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <SectionTitle syne={syne}>Experiences</SectionTitle>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(showAllExperiences ? experiences : experiences.slice(0, limit)).map((exp, idx) => (
             <AnimatedCard key={exp.id} delay={idx * 80}>
-              <div className="p-6 h-64 flex flex-col justify-between rounded-xl shadow-lg border border-gradient-to-r from-maroon-700 via-black to-red-600
-                              bg-[rgba(50,0,0,0.7)] backdrop-blur-md transition transform hover:scale-105 hover:shadow-2xl hover:shadow-maroon-500/50">
+              <div className="bg-white rounded-3xl border border-[#DBEEFF] p-6 flex flex-col justify-between h-60 hover:border-[#1A7EC8] hover:shadow-md hover:shadow-[#1A7EC8]/10 transition-all duration-200 shadow-sm">
                 <div>
-                  <h3 className="text-xl font-semibold text-maroon-300 drop-shadow-sm">{exp.title}</h3>
-                  <p className="text-gray-100">{exp.date}</p>
-                  <p className="mt-2 line-clamp-3 text-gray-200">{exp.description}</p>
+                  <h3 className="text-sm font-extrabold text-[#0A2540]" style={syne}>{exp.title}</h3>
+                  <p className="text-xs text-[#0A2540]/40 mt-1">{exp.date}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-[#0A2540]/60 leading-relaxed">{exp.description}</p>
                 </div>
-                <Link
-                  href={`/experience/${exp.id}`}
-                  className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-maroon-700 via-black to-red-600 text-white font-bold hover:opacity-90 text-center transition"
-                >
-                  View Details
+                <Link href={`/experience/${exp.id}`} className="mt-4 self-start text-xs font-bold text-[#1A7EC8] border border-[#DBEEFF] px-4 py-2 rounded-xl hover:bg-[#EFF6FF] transition">
+                  View Details →
                 </Link>
               </div>
             </AnimatedCard>
           ))}
         </div>
-
         {experiences.length > limit && (
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => setShowAllExperiences(!showAllExperiences)}
-              className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition"
-            >
-              {showAllExperiences ? "See Less" : "See More"}
+          <div className="flex justify-center mt-8">
+            <button onClick={() => setShowAllExperiences(!showAllExperiences)} className="px-6 py-2.5 rounded-full border-2 border-[#1A7EC8] text-[#1A7EC8] text-sm font-bold hover:bg-[#1A7EC8] hover:text-white transition">
+              {showAllExperiences ? "See Less" : "See More Experiences"}
             </button>
           </div>
         )}
       </section>
 
-      {/* Organizations */}
-      <section id="organizations" className="mt-24 max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl font-semibold text-center mb-12 drop-shadow-md animate-text-flicker">
-          Organizations
-        </h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ORGANIZATIONS */}
+      <section id="organizations" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <SectionTitle syne={syne}>Organizations</SectionTitle>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(showAllOrganizations ? organizations : organizations.slice(0, limit)).map((org, idx) => (
             <AnimatedCard key={org.id} delay={idx * 80}>
-              <div className="p-6 h-64 flex flex-col justify-between rounded-xl shadow-lg border border-gradient-to-r from-red-600 via-maroon-700 to-black bg-[rgba(50,0,0,0.7)] backdrop-blur-md transition transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50">
+              <div className="bg-white rounded-3xl border border-[#DBEEFF] p-6 flex flex-col justify-between h-60 hover:border-[#1A7EC8] hover:shadow-md hover:shadow-[#1A7EC8]/10 transition-all duration-200 shadow-sm">
                 <div>
-                  <h3 className="text-xl font-semibold text-red-400 drop-shadow-sm">{org.name}</h3>
-                  <p className="text-gray-100">{org.role}</p>
-                  <p className="mt-2 text-gray-200 line-clamp-3">{org.description}</p>
+                  <h3 className="text-sm font-extrabold text-[#0A2540]" style={syne}>{org.name}</h3>
+                  <p className="text-xs text-[#0A2540]/40 mt-1">{org.role}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-[#0A2540]/60 leading-relaxed">{org.description}</p>
                 </div>
-                <Link
-                  href={`/organization/${org.id}`}
-                  className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-maroon-700 via-black to-red-600 text-white font-bold hover:opacity-90 text-center transition"
-                >
-                  View Details
+                <Link href={`/organization/${org.id}`} className="mt-4 self-start text-xs font-bold text-[#1A7EC8] border border-[#DBEEFF] px-4 py-2 rounded-xl hover:bg-[#EFF6FF] transition">
+                  View Details →
                 </Link>
               </div>
             </AnimatedCard>
           ))}
         </div>
-
         {organizations.length > limit && (
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => setShowAllOrganizations(!showAllOrganizations)}
-              className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition"
-            >
-              {showAllOrganizations ? "See Less" : "See More"}
+          <div className="flex justify-center mt-8">
+            <button onClick={() => setShowAllOrganizations(!showAllOrganizations)} className="px-6 py-2.5 rounded-full border-2 border-[#1A7EC8] text-[#1A7EC8] text-sm font-bold hover:bg-[#1A7EC8] hover:text-white transition">
+              {showAllOrganizations ? "See Less" : "See More Organizations"}
             </button>
           </div>
         )}
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="mt-24 max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl font-semibold bg-gradient-to-r from-red-500 via-maroon-600 to-black text-transparent bg-clip-text drop-shadow-md">
-          Get In Touch
-        </h2>
-        <p className="text-gray-100 mt-4 drop-shadow-sm">
-          I’m always excited to connect, collaborate, or discuss new opportunities!
-        </p>
-
-        <div className="flex justify-center gap-6 mt-6">
-          <a href="mailto:gracejosephine@example.com" className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition">Email Me</a>
-          <a href="https://www.linkedin.com/in/gracejosephine" className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition">LinkedIn</a>
-          <a href="https://wa.link/jkywp5" className="px-6 py-2 rounded-lg border border-red-500 hover:bg-red-500 hover:text-black transition">WhatsApp</a>
+      {/* CONTACT */}
+      <section id="contact" className="py-16 px-6 max-w-5xl mx-auto relative z-10">
+        <div className="bg-[#0A2540] rounded-3xl p-10 text-center shadow-lg">
+          <span className="inline-block bg-[#1A7EC8] text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-wide mb-4">
+            ✦ Let's Connect
+          </span>
+          <h2 className="text-3xl font-extrabold text-white" style={syne}>Get In Touch!</h2>
+          <p className="mt-3 text-sm text-white/50 max-w-sm mx-auto">
+            Always excited to connect, collaborate, or discuss new opportunities!
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
+            <a href="mailto:yosephine.career@gmail.com" className="px-5 py-2.5 bg-white text-[#0A2540] text-sm font-bold rounded-full hover:bg-[#EFF6FF] transition">Email Me</a>
+            <a href="https://www.linkedin.com/in/grsphine/" className="px-5 py-2.5 bg-[#1A7EC8] text-white text-sm font-bold rounded-full hover:bg-[#1567A8] transition">LinkedIn</a>
+            <a href="https://wa.link/jkywp5" className="px-5 py-2.5 border border-white/20 text-white text-sm font-bold rounded-full hover:bg-white/10 transition">WhatsApp</a>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mt-16 text-sm text-center text-gray-400 relative z-10">
-        © {new Date().getFullYear()} Grace Josephine. All rights reserved.
+      {/* FOOTER */}
+      <footer className="py-8 text-center text-xs text-[#0A2540]/30 relative z-10">
+        © {new Date().getFullYear()} Grace Josephine. All rights reserved. ✦
       </footer>
+    </div>
+  );
+}
+
+function SectionTitle({ children, syne }: { children: React.ReactNode; syne: React.CSSProperties }) {
+  return (
+    <div className="flex items-center gap-4">
+      <h2 className="text-3xl font-extrabold text-[#0A2540] whitespace-nowrap" style={syne}>
+        {children}
+      </h2>
+      <div className="flex-1 h-px bg-[#DBEEFF]" />
     </div>
   );
 }

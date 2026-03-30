@@ -165,7 +165,6 @@ const experiences = [
   ]
 },
 
-
   {
     id: "exp2",
     title: "Social Media Officer Intern (Remote) – Ambivers Foundation",
@@ -204,7 +203,97 @@ const experiences = [
       },
     ],
     link: ""
-  }
+  },
+
+  {
+  id: "exp3",
+  title: "Trade Marketing Intern – PT Sreeya Sewu Indonesia Tbk",
+  date: "February 2026 – Present",
+  description:
+    "Analyzed sales and distribution data to support trade marketing decisions across distributors, wholesalers, and retailers.",
+  details:
+    "Independently analyzed month-over-month sales and distribution data using Excel, identifying underperforming SKUs and high-performing distributor/retailer channels. Tracked and compared promotion performance across periods, surfacing patterns of effective vs. ineffective campaigns. Monitored overall sales growth trends and calculated profit margin percentages to provide data-driven recommendations to the trade marketing team. Supported implementation of B2B trade strategies across distributors, wholesalers, and retailers.",
+  features: [
+    "Month-over-month sales analysis using Excel",
+    "SKU performance tracking and identification",
+    "Promotion effectiveness comparison across periods",
+    "Profit margin calculation and reporting",
+    "B2B trade strategy support across distribution channels"
+  ],
+  technologies: ["Microsoft Excel", "Data Analysis", "Trade Marketing"],
+    media: [
+      {
+        src: "/experiences/Sreeya/sr1.png",
+        alt: "Monitoring and Making SKP Listing"
+      },
+       {
+        src: "/experiences/Sreeya/sr3.png",
+        alt: "Review and Input freegods Claim from Distributor(Report)"
+      },
+       {
+        src: "/experiences/Sreeya/sr2.png",
+        alt: "Analytics Comparison Sales Data Trend and Growth"
+      },
+       {
+        src: "/experiences/Sreeya/sr4.png",
+        alt: "Analytics and Review Performance For Upcoming Plan Promotion"
+      },
+       {
+        src: "/experiences/Sreeya/sr5.png",
+        alt: "Analytics and Review Performance For Upcoming Plan Promotion"
+      },
+    ],
+    link: ""
+},
+
+{
+  id: "exp4",
+  title: "Business Development Intern – Bekerdja.id",
+  date: "February 2026 – Present",
+  description:
+    "Conducted market research and supported lead generation to identify business growth opportunities and drive partnership development.",
+  details:
+    "Generated 20+ potential leads through market research and competitor analysis to identify business growth opportunities. Currently managing active client engagement with a company, collaborating with the HR team to assess organizational needs and define partnership requirements. Tracked outreach performance using structured data reports and assisted in preparing partnership proposals. Collaborated with internal teams to develop and optimize business growth strategies.",
+  features: [
+    "Market research and competitor analysis",
+    "Lead generation (20+ potential leads)",
+    "Active client engagement and needs assessment",
+    "Collaboration with HR for partnership requirement definition",
+    "Outreach performance tracking and reporting",
+    "Partnership proposal preparation"
+  ],
+  technologies: ["Market Research", "Business Development", "Data Reporting", "Excel"],
+     media: [
+      {
+        src: "/experiences/Bkj/Bkj1.png",
+        alt: "List for Potential Companies"
+      },
+     {
+        src: "/experiences/Bkj/Bkj2.png",
+        alt: "Monitoring Performance Recruitment From Clients Need"
+      },
+      {
+        src: "/experiences/Bkj/Bkj3.png",
+        alt: "Reach Out some company from LinkedIn"
+      },
+       {
+        src: "/experiences/Bkj/Bkj4.png",
+        alt: "Monitoring Recruitment From Glints Platform"
+      },
+     {
+        src: "/experiences/Bkj/Bkj6.png",
+        alt: "Monitoring Recruitment Chats From Glints Platform"
+      },
+      {
+        src: "/experiences/Bkj/Bkj5.png",
+        alt: " "
+      },
+    ],
+    link: ""
+},
+
 ];
 
 export default experiences;
+
+
