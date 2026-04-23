@@ -208,7 +208,7 @@ const experiences = [
   {
   id: "exp3",
   title: "Trade Marketing Intern – PT Sreeya Sewu Indonesia Tbk",
-  date: "February 2026 – Present",
+  date: "February 2026 – May 2026",
   description:
     "Analyzed sales and distribution data to support trade marketing decisions across distributors, wholesalers, and retailers.",
   details:
@@ -248,8 +248,8 @@ const experiences = [
 
 {
   id: "exp4",
-  title: "Business Development Intern – Bekerdja.id",
-  date: "February 2026 – Present",
+  title: "Business Development Intern – Bekerdja.id (Remote)",
+  date: "February 2026 – May 2026",
   description:
     "Conducted market research and supported lead generation to identify business growth opportunities and drive partnership development.",
   details:
